@@ -1,3 +1,28 @@
+# DILA RAKE -- 拿別人的Rake for Chinese 來改的
+後面是原來的Readme
+
+# 安裝需求
+目前會使用 ycwang 的佛典斷詞，因此需裝好CRF
+
+
+## 請先安裝CRF++
+https://drive.google.com/drive/folders/0B4y35FiV1wh7fngteFhHQUN2Y1B5eUJBNHZUemJYQV9VWlBUb3JlX0xBdWVZTWtSbVBneU0
+
+下載CRF++0.58.zip檔案
+解壓縮後進入CRF++0.58/目錄內，按一般tarball方式安裝：
+./configure
+make
+sudo make install
+
+之後再進到 CRF++0.58/python/ 目錄中，安裝python模組：
+python setup.py build
+python setup.py install
+
+附件 crf-tagger.py 就是利用CRF++ python模組的斷詞器，執行方式為：
+python crf-tagger.py model.bin [佛典詞句]
+
+# ----------------------------
+
 # Rake 算法的中文应用
 这是一个对 Rose, S., Engel, D., Cramer, N., & Cowley, W. (2010). Automatic Keyword Extraction from Individual Documents. In M. W. Berry & J. Kogan (Eds.), Text Mining: Theory and Applications: John Wiley & Sons. 中提及的 Rapid Automatic Keyword Extraction 在中文上的应用, MIT License
 
